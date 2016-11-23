@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestCycleButton" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-8e-Kek" userLabel="informationLabel">
+                                <rect key="frame" x="16" y="66" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" restorationIdentifier="btn1" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-HR-gxh" userLabel="cycleButton1" customClass="PZCycleButton" customModule="TestCycleButton" customModuleProvider="target">
+                                <rect key="frame" x="74.5" y="128" width="225" height="56"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="MH2-xl-Vv8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="btn2" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-QL-Shl" userLabel="cycleButton2" customClass="PZCycleButton" customModule="TestCycleButton" customModuleProvider="target">
+                                <rect key="frame" x="75" y="214" width="225" height="56"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="R4K-Ff-Lu6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="bnt3" translatesAutoresizingMaskIntoConstraints="NO" id="pvP-tI-iD6" userLabel="cycleButton3" customClass="PZCycleButton" customModule="TestCycleButton" customModuleProvider="target">
+                                <rect key="frame" x="74.5" y="300" width="225" height="56"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="pef-wQ-Tcl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TLq-QL-Shl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="2TH-9Y-wwC"/>
+                            <constraint firstItem="pvP-tI-iD6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="2ze-lj-I9Q"/>
+                            <constraint firstItem="bKl-HR-gxh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="8O9-X1-0DS"/>
+                            <constraint firstItem="bKl-HR-gxh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G20-iN-CFZ"/>
+                            <constraint firstItem="YB7-8e-Kek" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="MDx-hi-7Nn"/>
+                            <constraint firstItem="pvP-tI-iD6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MyB-Gt-qgN"/>
+                            <constraint firstItem="pvP-tI-iD6" firstAttribute="top" secondItem="TLq-QL-Shl" secondAttribute="bottom" constant="30" id="NoR-nw-4Ke"/>
+                            <constraint firstItem="TLq-QL-Shl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OhK-18-UQb"/>
+                            <constraint firstItem="TLq-QL-Shl" firstAttribute="top" secondItem="bKl-HR-gxh" secondAttribute="bottom" constant="30" id="PA1-Vx-GZm"/>
+                            <constraint firstItem="bKl-HR-gxh" firstAttribute="top" secondItem="YB7-8e-Kek" secondAttribute="bottom" constant="41" id="apT-Br-foP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YB7-8e-Kek" secondAttribute="trailing" id="kZT-gE-E69"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YB7-8e-Kek" secondAttribute="leading" id="sN2-iy-AFF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cycleButton1" destination="bKl-HR-gxh" id="bva-Cg-E3n"/>
+                        <outlet property="cycleButton2" destination="TLq-QL-Shl" id="sUi-Yf-pVN"/>
+                        <outlet property="cycleButton3" destination="pvP-tI-iD6" id="kfC-xI-qfk"/>
+                        <outlet property="informationLabel" destination="YB7-8e-Kek" id="760-wr-t4h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>
